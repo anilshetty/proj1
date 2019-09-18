@@ -38,7 +38,7 @@ pipeline {
 			steps {				
 				input "Are you ready to deploy?"
 				sh 'echo deploy'
-				echo "${params.Greeting} World!"
+				echo "${params.Greeting} World how are you!"
 			}
 		}
 		
