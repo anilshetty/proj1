@@ -1,4 +1,7 @@
 pipeline {
+	
+	def FIRST = 'build'
+	def SECOND = 'test'
 
 	agent any
 	stages {
@@ -8,6 +11,7 @@ pipeline {
 			steps {
 
 				sh 'echo build'
+				sh 'echo $FIRST'
 			}
 		}
 		stage('test'){
@@ -15,6 +19,7 @@ pipeline {
 			steps {
 
 				sh 'echo test'
+				sh 'echo $SECOND'
 			}
 		}
 		stage('deploy'){
