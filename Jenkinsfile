@@ -14,6 +14,7 @@ pipeline {
 
 				sh 'echo build'
 				sh 'echo $FIRST'
+				sh 'echo env.BUILD_ID'
 			}
 		}
 		stage('test'){
