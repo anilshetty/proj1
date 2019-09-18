@@ -1,6 +1,7 @@
 pipeline {
 	
-<<<<<<< HEAD
+	environment{
+	
 	FIRST = 'builds'
 	SECOND = 'test'
 	GITHUB_TOKEN = credentials('GitHub_key')
@@ -8,8 +9,6 @@ pipeline {
 
 		
 	}
-=======
->>>>>>> origin/feature1
 	
 	agent any
 	stages {
@@ -21,9 +20,7 @@ pipeline {
 				sh 'echo build'
 				sh 'echo $FIRST'
 				sh "echo Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-				sh "echo ${env.BRANCH_NAME}"
-				sh "echo ${env.CHANGE_ID}"
-				
+				sh "echo ${GITHUB_TOKEN}"
 			}
 		}
 		stage('test'){
@@ -31,16 +28,19 @@ pipeline {
 			steps {
 
 				sh 'echo testing'
-<<<<<<< HEAD
 				sh 'echo $SECOND'
 				sh "echo ${GITHUB_LOGIN_USR} and ${GITHUB_LOGIN_PSW}"
-=======
-				
-				
->>>>>>> origin/feature1
 			}
 		}
+		stage('deploy'){
+
+			steps {				
+				input "Are you ready to deploy?"
+				sh 'echo deploying'
 				
+			}
+		}
+		
 
 	}
 	post {
@@ -50,5 +50,4 @@ pipeline {
 		success { sh 'echo SUCCESS' }
 		changed { sh 'echo PIPELINE STATE CHANGED' }
 	}
-
 }
