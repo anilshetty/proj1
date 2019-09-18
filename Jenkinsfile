@@ -1,7 +1,7 @@
 pipeline {
 	environment{
 	
-	FIRST = 'build'
+	FIRST = 'builds'
 	SECOND = 'test'
 	GITHUB_TOKEN = credentials('GitHub_key')
 	GITHUB_LOGIN = credentials('cicdgithubtoken')
@@ -26,7 +26,7 @@ pipeline {
 
 			steps {
 
-				sh 'echo test'
+				sh 'echo testing'
 				sh 'echo $SECOND'
 				sh "echo ${GITHUB_LOGIN_USR} and ${GITHUB_LOGIN_PSW}"
 			}
