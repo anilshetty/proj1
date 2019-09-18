@@ -2,7 +2,7 @@ pipeline {
 	
 	environment{
 	
-	FIRST = 'build'
+	FIRST = 'building'
 	SECOND = 'testing'
 	GITHUB_TOKEN = credentials('GitHub_key')
 	GITHUB_LOGIN = credentials('cicdgithubtoken')
