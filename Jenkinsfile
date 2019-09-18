@@ -19,8 +19,8 @@ pipeline {
 		}
 		stage('deploy'){
 
-			steps {
-
+			steps {				
+				input "Are you ready to deploy?"
 				sh 'echo deploy'
 			}
 		}
