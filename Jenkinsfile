@@ -14,7 +14,7 @@ pipeline {
 
 				sh 'echo build'
 				sh 'echo $FIRST'
-				sh 'echo Running ${env.BUILD_ID}' on ${env.JENKINS_URL}'
+				sh 'echo Running ${env.BUILD_ID} on ${env.JENKINS_URL}'
 			}
 		}
 		stage('test'){
