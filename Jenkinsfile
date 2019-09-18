@@ -8,9 +8,7 @@ pipeline {
 
 		
 	}
-	// parameters {
-        //                string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
-        //          }
+	
 	agent any
 	stages {
 
@@ -38,7 +36,7 @@ pipeline {
 			steps {				
 				input "Are you ready to deploy?"
 				sh 'echo deploying'
-				//echo "${params.Greeting} World how are you welcome to India!"
+				
 			}
 		}
 		
