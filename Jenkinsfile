@@ -38,9 +38,15 @@ pipeline {
 				sh 'echo deploying'
 				
 			}
-		}
-		
+		}		
 
+	}
+	post {
+		always { sh 'echo ALWAYS' }
+		unstable { sh 'echo UNSTABLE' }
+		failure { sh 'echo FAILURE' }
+		success { sh 'echo SUCCESS' }
+		changed { sh 'echo PIPELINE STATE CHANGED' }
 	}
 
 }
