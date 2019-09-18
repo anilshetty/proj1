@@ -1,7 +1,7 @@
 pipeline {
 	
-	def FIRST = 'build'
-	def SECOND = 'test'
+	FIRST = 'build'
+	SECOND = 'test'
 
 	agent any
 	stages {
