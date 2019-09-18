@@ -1,8 +1,10 @@
 pipeline {
+	environment{
 	
 	FIRST = 'build'
 	SECOND = 'test'
-
+		
+	}
 	agent any
 	stages {
 
