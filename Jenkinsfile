@@ -4,6 +4,7 @@ pipeline {
 	FIRST = 'build'
 	SECOND = 'test'
 	GITHUB_TOKEN = credentials('GitHub_key')
+	GITHUB_LOGIN = credentials('cicdgithubtoken')
 
 		
 	}
@@ -26,6 +27,7 @@ pipeline {
 
 				sh 'echo test'
 				sh 'echo $SECOND'
+				sh "echo ${GITHUB_LOGIN_USR} and ${GITHUB_LOGIN_PSW}"
 			}
 		}
 		stage('deploy'){
