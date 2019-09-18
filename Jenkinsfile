@@ -32,14 +32,7 @@ pipeline {
 				sh "echo ${GITHUB_LOGIN_USR} and ${GITHUB_LOGIN_PSW}"
 			}
 		}
-		stage('deploy'){
-
-			steps {				
-				input "Are you ready to deploy?"
-				sh 'echo deploying'
-				
-			}
-		}
+		
 		
 
 	}
