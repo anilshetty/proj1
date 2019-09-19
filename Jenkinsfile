@@ -5,9 +5,7 @@ pipeline {
 	FIRST = 'build'
 	SECOND = 'testing latest feature now'
 	GITHUB_TOKEN = credentials('GitHub_key')
-	GITHUB_LOGIN = credentials('cicdgithubtoken')
-
-		
+	GITHUB_LOGIN = credentials('cicdgithubtoken')		
 	}
 	
 	agent any
