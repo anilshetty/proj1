@@ -19,6 +19,7 @@ pipeline {
 				sh 'echo $FIRST'
 				sh "echo Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
 				sh "echo ${GITHUB_TOKEN}"
+				sh "mvn --version"
 			}
 		}
 		stage('test'){
